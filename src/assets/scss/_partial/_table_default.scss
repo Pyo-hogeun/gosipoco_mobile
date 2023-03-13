@@ -1,0 +1,68 @@
+.table-default{
+    font-size: 15px;
+    tbody{
+        th{
+            background-color: $tablethBg;
+        }
+        td, th{
+            height: $tableTdHeight;
+            border: 1px solid $tableBorderColor;
+            padding: 0 20px;            
+        }
+    }
+    &.th-align-l{
+      td, th{
+        text-align: left;
+      }
+      td{
+        padding-left: 10px;
+      }
+    }
+    .address-wrap{
+      padding: 10px 0;
+      .post-number{
+        margin-bottom: 5px;
+      }
+      .address{
+        input{
+          margin-right: 3px;
+        }
+      }
+    }
+    .notice-text{
+        font-size: 15px;
+        font-weight: 700;
+        color: #ff0000;
+    }
+    .description{
+        font-size: 14px;
+        color: #898989;
+    }
+}
+.table-bottom{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 20px;
+    .prefix, .suffix{
+        display: flex;
+        flex: 1 0 50%;
+        align-items: center;
+    }
+    .suffix{
+        justify-content: flex-end;
+    }
+    .center{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.table-bottom-center{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+}

@@ -1,0 +1,21 @@
+.terms{
+  .terms-detail{
+    font-size: 15px;
+    >div{
+      margin: 10px 0;
+      padding: 0 20px;
+      border-top: 2px solid $primaryFontColor;
+      font-family: '맑은고딕', sans-serif;
+      h3{
+        font-size: 15px;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 10px -20px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $primaryFontColor;
+      }
+    }
+  }
+}

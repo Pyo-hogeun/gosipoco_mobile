@@ -1,0 +1,58 @@
+.gnb{
+  border-bottom: 1px solid #999999;
+  min-width: calc($containerWidth + 40px);
+  .container{
+    display: flex;
+    position: relative;
+    width: $containerWidth;
+    height: $gnbHeight;
+    margin: auto;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    .registration{
+  
+    }
+    .gosi-logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .icon-logo{
+        width: 199px;
+        height: 57px;
+      }
+    }
+    .btn-group{
+      ul{
+        li{
+          position: relative;
+          display: inline-block;
+          padding: 0 25px;
+          &:after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 15px;
+            width: 1px;
+            border-right: 2px solid #999999;
+          }
+          &:last-child{
+            &:after{
+              content: none;
+            }
+          }
+          a{
+            display: inline-block;
+            [class*=icon-]{
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}

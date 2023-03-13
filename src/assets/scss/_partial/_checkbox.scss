@@ -1,0 +1,18 @@
+.checkbox-wrap {
+    font-size: 15px;
+    padding: 5px 5px;
+    cursor: pointer;
+    span {
+      vertical-align: middle;
+    }
+    input[type=checkbox] {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      accent-color: red;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  

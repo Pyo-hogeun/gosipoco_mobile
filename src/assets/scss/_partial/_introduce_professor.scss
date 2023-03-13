@@ -1,0 +1,62 @@
+.introduce-professor{
+  .professor-list{
+    >ul{
+      li.card{
+        display: flex;
+        padding: 40px;
+        justify-content: center;
+        gap: 130px;
+        border: 1px solid #DDDDDD;
+        font-size: 15px;
+        margin-bottom: 6px;
+        .img{
+          flex: 0 0 340px;
+          img{
+            width: 340px;
+            height: 265px;
+            object-fit: cover;
+          }
+          .btn-group{
+            margin-top: 6px;
+            text-align: center;
+            .btn{
+              margin-right: 5px;
+              font-size: 12px;
+              width: 142px;
+              &:last-child{
+                margin-right: 0;
+              }
+              [class*=icon-]{
+                margin-right: 10px;
+                height: 25px;
+              }
+            }
+          }
+        }
+        .profile{
+          flex: 0 0 480px;
+          .category{
+            margin-bottom: 40px;
+          }
+          .scroll-custom{
+            height: 250px;
+            .name{
+              color: #259bff;
+            }
+            .history{
+              .title{
+                margin-top: 5px;
+                margin-bottom: 20px;
+              }
+              >ul{
+                li{
+                  margin: 5px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

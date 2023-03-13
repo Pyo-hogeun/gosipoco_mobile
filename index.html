@@ -1,0 +1,70 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 리스트</title>
+  <style>
+    body, html, ul{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      display: inline-block;
+      text-decoration: none;
+      color: #333333;
+    }
+    a.link.on{
+      color: #000000;
+      font-weight: 700;
+    }
+    a.tag{
+      border: 1px solid #999999;
+      padding: 5px;
+      font-size: 10px;
+      color: #999999;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+    h2{
+      position: sticky;
+      top: 0;
+      padding: 10px;
+    }
+    ul{
+      width: 500px;
+    }
+    li{
+      list-style: none;
+      border-bottom: 1px solid #d8d8d8;
+      padding: 10px 10px 10px 20px;
+    }
+    li:hover{
+      background-color: #f1f1f1;
+    }
+    iframe{
+      position: fixed;
+      left: 500px;
+      width: calc(100vw - 520px);
+      height: 100vh;
+      right:10px;
+      top: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body><div class="wrap"><ul><li><a href="./html/02.html" target="viewer" class="link"> 02.html</a><a href="./html/02.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/03.html" target="viewer" class="link"> 03.html</a><a href="./html/03.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/04.html" target="viewer" class="link"> 04.html</a><a href="./html/04.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/05.html" target="viewer" class="link"> 05.html</a><a href="./html/05.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/06.html" target="viewer" class="link"> 06.html</a><a href="./html/06.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/07.html" target="viewer" class="link"> 07.html</a><a href="./html/07.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/08.html" target="viewer" class="link"> 08.html</a><a href="./html/08.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/09.html" target="viewer" class="link"> 09.html</a><a href="./html/09.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/10.html" target="viewer" class="link"> 10.html</a><a href="./html/10.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/11.html" target="viewer" class="link"> 11.html</a><a href="./html/11.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/12.html" target="viewer" class="link"> 12.html</a><a href="./html/12.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/16.html" target="viewer" class="link"> 16.html</a><a href="./html/16.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/17.html" target="viewer" class="link"> 17.html</a><a href="./html/17.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/18.html" target="viewer" class="link"> 18.html</a><a href="./html/18.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/19.html" target="viewer" class="link"> 19.html</a><a href="./html/19.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/20.html" target="viewer" class="link"> 20.html</a><a href="./html/20.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/22.html" target="viewer" class="link"> 22.html</a><a href="./html/22.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/23.html" target="viewer" class="link"> 23.html</a><a href="./html/23.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/24.html" target="viewer" class="link"> 24.html</a><a href="./html/24.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/25.html" target="viewer" class="link"> 25.html</a><a href="./html/25.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/56.html" target="viewer" class="link"> 56.html</a><a href="./html/56.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/footer.html" target="viewer" class="link"> footer.html</a><a href="./html/footer.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/layout.html" target="viewer" class="link"> layout.html</a><a href="./html/layout.html" target="_blank" class="tag">새창열기</a></li><li><a href="./html/style_guide.html" target="viewer" class="link"> style_guide.html</a><a href="./html/style_guide.html" target="_blank" class="tag">새창열기</a></li></ul></div><script>
+console.log('script');
+let links = document.querySelectorAll('a.link');
+links.forEach((item, index)=>{
+  item.addEventListener('click', function(e){
+    let onLinks = document.querySelectorAll('a.link.on');
+    onLinks.forEach((item, index)=>{
+      item.classList.remove('on');
+    })
+    e.target.classList.add('on');
+  })
+})
+</script><iframe src="./html/board-type/N_게시글_리스트_타입3-3.html" name="viewer"></iframe>

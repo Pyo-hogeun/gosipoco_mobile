@@ -1,0 +1,31 @@
+.join{
+  .text-box{
+    border: 1px solid $boxBorderColor;
+    padding: 20px;
+    height: 150px;
+    font-size: 13px;
+    line-height: 1.4;
+    .scroll-custom{
+      height: 100%;
+    }
+  }
+  .agree-terms{
+    margin-top: 15px;
+    text-align: right;
+  }
+  
+  .table-bottom{
+    justify-content: center;
+    .answer{
+      font-size: 18px;
+      margin-right: 20px;
+    }
+    .radio-wrap{
+      font-size: 18px;
+    }
+  }
+  .bottom-btn-wrap{
+    margin-top: 35px;
+    text-align: center;
+  }
+}

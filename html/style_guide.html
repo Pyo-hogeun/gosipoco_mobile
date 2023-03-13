@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleGuide</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+</head>
+<body>
+    <h1>스타일가이드</h1>
+    <h2>버튼</h2>
+    <div class="sample">
+        <button class="btn btn-sm btn-primary btn-round">sm버튼</button>
+        <button class="btn btn-sm btn-secondary btn-round">sm버튼</button>
+        <button class="btn btn-sm btn-default btn-round">sm버튼</button>
+        <button class="btn btn-sm btn-green">강의보기</button>
+        <button class="btn btn-sm btn-outline-primary btn-round">sm버튼</button>
+        <button class="btn btn-sm btn-outline-secondary btn-round">sm버튼</button>
+        <button class="btn btn-sm btn-outline-default btn-round">sm버튼</button>
+        <button class="btn btn-md btn-primary btn-round">md버튼</button>
+        <button class="btn btn-md btn-secondary btn-round">md버튼</button>
+        <button class="btn btn-md btn-default btn-round">md버튼</button>
+        <button class="btn btn-md btn-outline-primary btn-round">md버튼</button>
+        <button class="btn btn-md btn-outline-secondary btn-round">md버튼</button>
+        <button class="btn btn-md btn-outline-default btn-round">md버튼</button>
+    </div>
+    <div class="sample">
+        <button class="btn btn-primary btn-xlg btn-wide">xlg wide 버튼</button>
+        <button class="btn btn-outline-primary btn-xlg btn-wide">xlg wide 버튼</button>
+    </div>
+    <h2>버튼 multie</h2>
+    <div class="sample">
+        <div class="btn-group flex-type">
+            <button class="btn btn-primary btn-xlg btn-wide">xlg wide 버튼</button>
+            <button class="btn btn-outline-primary btn-xlg btn-wide">xlg wide 버튼</button>
+        </div>
+    </div>
+    <h2>탭</h2>
+    <div class="sample">
+        <div class="tab-wrap col-6">
+            <div class="tab-item on"><a href="" class="tab">탭 아이템1</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템2</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템3</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템4</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템탭 아이템5</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템6</a></div>
+        </div>
+        <br>
+        <div class="tab-wrap col-5">
+            <div class="tab-item on"><a href="" class="tab">탭 아이템1</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템2</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템3</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템4</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템탭 아이템5</a></div>
+        </div>
+        <br>
+        <div class="tab-wrap col-4">
+            <div class="tab-item on"><a href="" class="tab">탭 아이템1</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템2</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템3</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템4</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템탭 아이템5</a></div>
+        </div>
+        <br>
+        <div class="tab-wrap col-3">
+            <div class="tab-item"><a href="" class="tab">탭 아이템1</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템2</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템3</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템4</a></div>
+            <div class="tab-item"><a href="" class="tab">탭 아이템탭 아이템5</a></div>
+        </div>
+    </div>
+    <h2>라디오버튼</h2>
+    <div class="sample">
+        <label class="radio-wrap">
+            <input type="radio" name='level' checked>
+            <span>단과반(1개월)</span>
+        </label>
+        <label class="radio-wrap" >
+            <input type="radio" name='level'>
+            <span>단기반(6개월)</span>
+        </label>
+        <label class="radio-wrap" >
+            <input type="radio" name='level'>
+            <span>종합반(12개월)</span>
+        </label>
+        <label class="radio-wrap" >
+            <input type="radio" name='level'>
+            <span>합격보장반</span>
+        </label>
+    </div>
+    <h2>체크박스</h2>
+    <div class="sample">
+        <label class="checkbox-wrap">
+            <input type="checkbox" name="level">
+            <span>공지</span>
+        </label>
+        <label class="checkbox-wrap">
+            <input type="checkbox" name="level">
+            <span>비밀글</span>
+        </label>
+    </div>
+    <h2>테이블 - 가로형</h2>
+    <div class="sample">
+        <table class="table-default th-align-l">
+            <colgroup>
+                <col style="width: 220px;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>아이디</th>
+                    <td>
+                      <input type="text" name="" id="" class="default-input">
+                      <button class="btn btn-sm btn-primary btn-round">중복확인</button>
+                      <span class="notice-text">사용가능</span>
+                      <span class="description">(영,숫자 4~12자 이내로입력)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td>
+                      <input type="password" name="" id="" class="default-input"><span class="description">(영문,숫자,특수기호 포함 18자이내)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td>
+                      <input type="password" name="" id="" class="default-input">
+                    </td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td>
+                      <input type="text" name="" id="" class="default-input">
+                      <span class="description">실명으로 기재하세요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>일반전화</th>
+                    <td>
+                      <div class="cell-phone">
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                        <span class="dash">-</span>
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                        <span class="dash">-</span>
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대전화</th>
+                    <td>
+                      <div class="cell-phone">
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                        <span class="dash">-</span>
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                        <span class="dash">-</span>
+                        <input type="text" maxlength="4" name="" id="" class="default-input input-sm">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                      <input type="text" name="" id="" class="default-input input-md">
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>
+                      <div class="address-wrap">
+                        <div class="post-number">
+                          <input type="text" name="" id="" class="default-input input-sm">
+                          <button class="btn btn-sm btn-primary btn-round">우편번호</button>
+                        </div>
+                        <div class="address">
+                          <input type="text" name="" id="" class="default-input input-md">
+                          <input type="text" name="" id="" class="default-input input-md">
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>테이블 - 세로형</h2>
+    <div class="sample">
+        <table class="table-schedule">
+            <thead>
+                <tr>
+                    <th>자격증명</th>
+                    <th>회차</th>
+                    <th>1차시험</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>손해평가사</td>
+                    <td>제9회</td>
+                    <td>2023-01-01~2023-05-31</td>
+                </tr>
+                <tr>
+                    <td>손해평가사</td>
+                    <td>제9회</td>
+                    <td>2023-01-01~2023-05-31</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-bottom">
+            <div class="prefix">
+                <button class="btn btn-md btn-outline-default btn-round">선택삭제</button>
+            </div>
+            <div class="center">
+                <div class="pagination">
+                    <a href="" class="to-first disabled"></a>
+                    <a href="" class="prev"></a>
+                    <a href="" class="page-num current">1</a>
+                    <a href="" class="page-num">2</a>
+                    <a href="" class="page-num">3</a>
+                    <a href="" class="page-num">4</a>
+                    <a href="" class="page-num">5</a>
+                    <a href="" class="page-num">6</a>
+                    <a href="" class="page-num">7</a>
+                    <a href="" class="page-num">8</a>
+                    <a href="" class="page-num">9</a>
+                    <a href="" class="next"></a>
+                    <a href="" class="to-last"></a>
+                </div>
+            </div>
+            <div class="suffix">
+                <button class="btn btn-md btn-outline-secondary btn-round">글쓰기</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>테이블형 리스트</h2>
+    <div class="sample">
+        <div class="table-list">
+            <ul>
+                <li class="thead tr">
+                    <div class="th">
+                        <label class="checkbox-wrap">
+                            <input type="checkbox" name="level">
+                        </label>
+                    </div>
+                    <div class="th">번호</div>
+                    <div class="th">제목</div>
+                    <div class="th">등록자</div>
+                </li>
+                <li class="tr">
+                    <div class="td">
+                        <label class="checkbox-wrap">
+                            <input type="checkbox" name="level">
+                        </label>
+                    </div>
+                    <div class="td">33</div>
+                    <div class="td">제목입니다</div>
+                    <div class="td">홍길동</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>heading</h2>
+    <div class="sample">
+        <div class="content-container">
+            <h2>제목 h2스타일입니다</h2>
+            <h3>제목 h3스타일입니다</h3>
+        </div>
+    </div>
+
+    <h2>input</h2>
+    <div class="sample">
+        default-input
+        <div class="input-wrap">
+            <input type="text" class="default-input" >
+        </div>
+        input-sm
+        <div class="input-wrap">
+            <input type="text" class='default-input input-sm' >
+        </div>
+        input-md
+        <div class="input-wrap">
+            <input type="text" class="default-input input-md" >
+        </div>
+        search-input
+        <div class="input-wrap search">
+          <input type="text" class="default-input">
+        </div>
+    </div>
+
+    <h2>공지사항 bottom</h2>
+    <div class="sample">
+        <div class="notification-bottom">
+            <button class="btn btn-md btn-outline-secondary btn-round">등록하기</button>
+            <button class="btn btn-md btn-outline-primary btn-round">목록보기</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.radio-wrap {
+    font-size: 15px;
+    padding: 5px 5px;
+    cursor: pointer;
+    span {
+      vertical-align: middle;
+    }
+    [type="radio"] {
+      vertical-align: middle;
+      appearance: none;
+      border: max(2px, 1px) solid gray;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      transition: border 0.5s;
+      &:checked {
+        border: 7px solid red;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  

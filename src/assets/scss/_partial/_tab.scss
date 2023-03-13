@@ -1,0 +1,41 @@
+.tab-wrap{
+  display: grid;
+  flex-wrap: wrap;
+  
+  .tab-item{
+    flex: 0 0 auto;
+    border: 1px solid #ababab;
+    border-width: 1px 1px 1px 0;
+    box-sizing: border-box;
+    &:nth-last-of-type(1){
+      border-right-width: 1px;
+    }
+    a{
+      display: flex;
+      height: 65px;
+      justify-content: center;
+      align-items: center;
+    }
+    &.on{
+      background-color: #259bff;
+      border: 0;
+      a{
+        color: #ffffff;
+      }
+    }
+  }
+  @for $i from 2 through 6 {
+    &.col-#{$i}{
+      grid-template-columns: repeat(#{$i}, 1fr);
+      .tab-item{
+        flex-basis: calc(100% / $i);
+        &:nth-of-type(#{$i}n+1){
+          border-left-width: 1px;
+        }
+        &:nth-of-type(n+#{$i+1}){
+          border-top-width: 0;
+        }
+      }
+    }
+  }
+}

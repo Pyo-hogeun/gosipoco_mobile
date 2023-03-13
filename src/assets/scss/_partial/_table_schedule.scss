@@ -1,0 +1,13 @@
+.table-schedule{
+    font-size: 15px;
+    thead{
+        th{
+            background-color: $tablethBg;
+        }
+    }
+    th, td{
+        height: $tableTdHeight;
+        padding: 0 10px;
+        border: 1px solid $tableBorderColor;
+    }
+}

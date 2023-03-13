@@ -1,0 +1,53 @@
+.pagination{
+  a{
+    display: inline-flex;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+    &.page-num{
+      margin: 0 5px;
+    }
+    &.disabled{
+      opacity: 0.3;
+      cursor: default;
+    }
+    &.current{
+      color: #ff0000;
+      font-weight: 700;
+      cursor: default;
+    }
+  }
+  .to-first, .prev, .to-last, .next{
+    border: 1px solid $defaultFontColor;
+    border-radius: 4px;
+    &:before{
+      margin-top: -2px;
+      letter-spacing: -2px;
+    }
+  }
+  .to-first{
+    &:before{
+      content: '<<',
+    }
+  }
+  .prev{
+    margin-right: 5px;
+    &:before{
+      content: '<',
+    }
+  }
+  .next{
+    margin-left: 5px;
+    &:before{
+      content: '>',
+    }
+  }
+  .to-last{
+    &:before{
+      content: '>>',
+    }
+  }
+}

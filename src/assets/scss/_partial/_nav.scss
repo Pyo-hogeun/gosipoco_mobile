@@ -1,0 +1,24 @@
+nav.menu{
+  border-bottom: 1px solid #DDDDDD;
+  min-width: calc($containerWidth + 40px);
+  .container{
+    width: $containerWidth;
+    margin: auto;
+    padding: 0 20px;
+    ul{
+      display: flex;
+      li{
+        flex: 1 1 auto;
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: $navHeight;
+          &:hover{
+            color: $primaryFontColor;
+          }
+        }
+      }
+    }
+  }
+}

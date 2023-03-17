@@ -1,9 +1,10 @@
 const fs = require('fs');
+let iconv = require('iconv-lite');
 const dir = './html';
 let htmlFileList = {};
 let htmlTemplate = `<html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="euc-kr">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML 리스트</title>
@@ -87,7 +88,9 @@ links.forEach((item, index)=>{
 // const css = 
 const iframe = '<iframe src="./html/board-type/N_게시글_리스트_타입3-3.html" name="viewer"></iframe>';
 htmlTemplate += iframe;
-fs.writeFile('index.html', htmlTemplate, ()=>{
+
+let euckrStr = iconv.encode(htmlTemplate, 'euc-kr');
+fs.writeFile('index.html', euckrStr, 'binary', ()=>{
   console.log('성공');
 });
 // console.log(htmlTemplate);

@@ -1,66 +1,95 @@
-.table-default{
-    font-size: 15px;
-    tbody{
-        th{
-            background-color: $tablethBg;
-        }
-        td, th{
-            height: $tableTdHeight;
-            border: 1px solid $tableBorderColor;
-            padding: 0 20px;            
-        }
+.table-default {
+  font-size: 13px;
+  table-layout: fixed;
+  tbody {
+    th {
+      background-color: $tablethBg;
     }
-    &.th-align-l{
-      td, th{
-        text-align: left;
-      }
-      td{
-        padding-left: 10px;
+    td,
+    th {
+      height: $tableTdHeight;
+      border: 1px solid $tableBorderColor;
+      padding: 5px 10px;
+    }
+  }
+  &.th-align-l {
+    td,
+    th {
+      text-align: left;
+    }
+    td {
+      padding-left: 10px;
+    }
+  }
+  .address-wrap {
+    .post-number {
+      margin-bottom: 5px;
+      input{
+        margin-right: 5px;
       }
     }
-    .address-wrap{
-      padding: 10px 0;
-      .post-number{
+    .address {
+      input {
+        width: 100%;
         margin-bottom: 5px;
-      }
-      .address{
-        input{
-          margin-right: 3px;
+        &:last-child{
+          margin-bottom: 0;
         }
       }
     }
-    .notice-text{
-        font-size: 15px;
-        font-weight: 700;
-        color: #ff0000;
+  }
+  .notice-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff0000;
+  }
+  .description {
+    font-size: 14px;
+    color: #898989;
+  }
+  .notice {
+    margin: 5px 0;
+  }
+  input{
+    box-sizing: border-box;
+    &[type="text"],
+    &[type="number"],
+    &[type="password"] {
+      &.default-input {
+        max-width: 100%;
+      }
     }
-    .description{
-        font-size: 14px;
-        color: #898989;
-    }
+  }
 }
-.table-bottom{
+.table-topper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+.table-bottom {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 20px;
+  .prefix,
+  .suffix {
     display: flex;
-    position: relative;
+    flex: 1 0 50%;
     align-items: center;
-    margin-top: 20px;
-    .prefix, .suffix{
-        display: flex;
-        flex: 1 0 50%;
-        align-items: center;
-    }
-    .suffix{
-        justify-content: flex-end;
-    }
-    .center{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+  }
+  .suffix {
+    justify-content: flex-end;
+  }
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.table-bottom-center{
+.table-bottom-center {
   display: flex;
   justify-content: center;
   margin-top: 50px;

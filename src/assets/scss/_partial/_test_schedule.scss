@@ -1,7 +1,11 @@
 .test-schedule{
-  .test-description{
-    padding: 10px 0;
-    margin: 0;
-    line-height: 1.6;
+  .table-default{
+    margin-top: 20px;
+  }
+  .table-schedule{
+    min-width: 600px;
+    a{
+      color: $primary;
+    }
   }
 }

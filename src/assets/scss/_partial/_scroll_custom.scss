@@ -1,5 +1,5 @@
 .scroll-custom{
-  overflow-y: auto;
+  
   &::-webkit-scrollbar{
     width: 5px;
     height: 8px;
@@ -8,5 +8,11 @@
     background-color: #aaa;
     border-radius: 10px;
 
+  }
+  &.vertical{
+    overflow-y: auto;
+  }
+  &.horizon{
+    overflow-x: auto;
   }
 }

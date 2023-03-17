@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
+var convertEncoding = require('gulp-convert-encoding');
 
 // scss
 var sass = require('gulp-sass')(require('sass'));
@@ -36,8 +37,9 @@ gulp.task('js', function () {
 });
 
 gulp.task('html', function () {
-	return gulp.src(destinationSrc + 'html/**/*.html')
-		// .pipe(gulp.dest(destinationSrc+'html'))
+	return gulp.src(destinationSrc + 'html/*.html')
+		// .pipe(convertEncoding({to:'euc-kr'}))
+		// .pipe(gulp.dest(destinationSrc+'html/encoded'))
 		.pipe(browserSync.stream());
 });
 
@@ -53,4 +55,4 @@ gulp.task('serve', async function () {
 	gulp.watch([destinationSrc+"html/**/*.html"], gulp.series('html'));
 });
 
-gulp.task('default', gulp.series('sass', 'js', 'serve' ));
+gulp.task('default', gulp.series('sass', 'js', 'html','serve' ));

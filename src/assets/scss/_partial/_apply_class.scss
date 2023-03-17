@@ -1,11 +1,14 @@
 .apply-class{
-  img{
-    width: 100%;
-  }
-  ul>li{
-    a{
-      display: block;
-      line-height: 0;
+  .banners{
+    margin-top: 20px;
+    img{
+      width: 100%;
+    }
+    ul>li{
+      a{
+        display: block;
+        line-height: 0;
+      }
     }
   }
 }

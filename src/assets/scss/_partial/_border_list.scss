@@ -1,11 +1,13 @@
-.table-list {
+.border-list {
   > ul {
     display: table;
     width: 100%;
     border-collapse: collapse;
     box-sizing: border-box;
+    font-size: 13px;
     > li {
       display: table-row;
+      border-bottom: 1px solid $tableBorderColor;
       &.thead {
         background-color: $tablethBg;
         font-weight: 700;
@@ -13,11 +15,35 @@
       .th,
       .td {
         display: table-cell;
-        border: 1px solid $tableBorderColor;
         text-align: center;
         height: $tableTdHeight;
-        vertical-align: middle;
-        font-size: 13px;
+        vertical-align: top;
+        .checkbox-wrap{
+          padding: 0;
+          line-height: 0;
+          input[type="checkbox"]{
+            width: 15px;
+            height: 15px;
+            margin: 0px;
+          }
+        }
+      }
+      .td{
+        .title{
+          text-align: left;
+          a{
+            font-weight: 700;
+            font-size: 15px;
+          }
+        }
+        .info{
+          text-align: left;
+          >ul{
+            >li{
+              display: inline-block;
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,18 @@
+.edu-board{
+  .table-default{
+    margin-top: 20px;
+    .check-wrap{
+      margin: 5px 0;
+      .checkbox-wrap{
+        &:first-child{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .file-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0;
+  }
+}

@@ -5,6 +5,16 @@
     padding: 5px 10px;
     border: 0;
     border-radius: 4px;
+    &.btn-sm{
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+    &.btn-md{
+        font-size: 15px;
+    }
+    &.btn-lg{
+        font-size: 25px;
+    }
     &.btn-round{
         border-radius: 30px;
     }
@@ -13,7 +23,7 @@
     }
     // filled type
     &.btn-primary{
-        background-color: #259bff;
+        background-color: $primary;
         color: #ffffff;
     }
     &.btn-secondary{
@@ -29,15 +39,15 @@
         color: #ffffff;
     }
     &.btn-darkblue{
-        background-color: #0a487e
+        background-color: $darkBlue;
         ;
         color: #ffffff;
     }
     // outline type
     &.btn-outline-primary{
         background-color: #ffffff;
-        border: 1px solid #259bff;
-        color: #259bff;
+        border: 1px solid $primary;
+        color: $primary;
     }
     &.btn-outline-secondary{
         background-color: #ffffff;

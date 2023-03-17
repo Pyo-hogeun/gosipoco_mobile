@@ -1,4 +1,8 @@
 .pagination{
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+  justify-content: space-between;
   a{
     display: inline-flex;
     height: 25px;
@@ -23,6 +27,7 @@
   .to-first, .prev, .to-last, .next{
     border: 1px solid $defaultFontColor;
     border-radius: 4px;
+    flex: 0 0 25px;
     &:before{
       margin-top: -2px;
       letter-spacing: -2px;
@@ -34,13 +39,11 @@
     }
   }
   .prev{
-    margin-right: 5px;
     &:before{
       content: '<',
     }
   }
   .next{
-    margin-left: 5px;
     &:before{
       content: '>',
     }

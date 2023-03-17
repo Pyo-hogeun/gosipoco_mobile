@@ -1,0 +1,13 @@
+.class-sample{
+  .sample-video-wrap{
+    margin-top: 20px;
+    .video-wrap{
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 20px;
+      video{
+        width: 100%;
+      }
+    }
+  }
+}

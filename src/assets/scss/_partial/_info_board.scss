@@ -1,9 +1,16 @@
 .info-board{
+  .table-topper{
+    font-size: 12px;
+    line-height: 20px;
+    [class*=icon]{
+      vertical-align: middle;
+    }
+  }
   .table-list{
     >ul>li{
       font-size: 16px;
       .th, .td{
-        padding: 0 15px;
+        padding: 5px;
       }
       &:not(.thead){
         cursor: pointer;
@@ -14,21 +21,32 @@
       &.tr{
         .th:nth-of-type(1),
         .td:nth-of-type(1){
-          width: 45px;
-        }
-        .th:nth-of-type(2),
-        .td:nth-of-type(2){
-          width: 100px;
-        }
-        .td:nth-of-type(3){
-          text-align: left;
+          width: 35px;
         }
         .th:nth-last-of-type(1),
-        .td:nth-last-of-type(1),
-        .th:nth-last-of-type(2),
-        .td:nth-last-of-type(2)
-        {
-          width: 120px;
+        .td:nth-last-of-type(1){
+          width: 80px;
+        }
+      }
+    }
+  }
+  .board.border-list{
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    margin-top: 20px;
+    border-top: 1px solid $tableOutBorderColor;
+    li.tr{
+      .td, .th{
+        padding: 5px;
+        height: 45px;
+        &:nth-of-type(1){
+          width: 20px;
+        }
+        &:nth-of-type(2){
+          width: 30px;
+        }
+        .title{
+          margin-bottom: 5px;
         }
       }
     }

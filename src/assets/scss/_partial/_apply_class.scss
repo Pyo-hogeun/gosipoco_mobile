@@ -11,4 +11,68 @@
       }
     }
   }
+  .table-default{
+    margin-bottom: 10px;
+    .cell-phone{
+      display: flex;
+      align-items: center;
+      .input-wrap{
+        flex: 1 1 25%;
+        input{
+          width: 100%;
+        }
+      }
+      .dash{
+        padding: 2px;
+      }
+    }
+    .class-period{
+      label{
+        display: block;
+        padding-left: 0;
+      }
+    }
+    .price{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .discounted{
+        input{
+          color: $red;
+        }
+      }
+    }
+    .select-certify{
+      display: flex;
+      gap: 5px;
+      select{
+        flex: 1 1 auto;
+      }
+    }
+    .order-list{
+      margin-left: 10px;
+      li{
+        text-indent: -15px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .term-text{
+    text-align: center;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height:1.4;
+  }
+  .contract{
+    margin: 10px 0 20px;
+    text-align: center;
+    .agree{
+      margin: 10px 0;
+      font-weight: 700;
+    }
+  }
+  .notice-important{
+    color: $red;
+  }
 }

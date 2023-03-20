@@ -48,7 +48,8 @@ select.default-input {
   border-radius: 5px;
   height: 32px;
   font-size: 15px;
-  padding: 10px;
+  padding: 0 5px;
+  min-width: 80px;
 }
 .cell-phone {
   input {

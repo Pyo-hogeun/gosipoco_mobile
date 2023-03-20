@@ -100,7 +100,12 @@ html, body, button, textarea, input, select {
 }
 .content-container h4 {
   font-size: 15px;
-  margin: 0;
+  margin: 15px 0 5px;
+}
+.content-container h4 .sub-text {
+  font-size: 13px;
+  color: #818181;
+  margin-left: 5px;
 }
 
 [class*=icon] {
@@ -131,7 +136,7 @@ html, body, button, textarea, input, select {
   font-size: 15px;
 }
 .btn.btn-lg {
-  font-size: 25px;
+  font-size: 18px;
 }
 .btn.btn-round {
   border-radius: 30px;
@@ -385,7 +390,8 @@ select.default-input {
   border-radius: 5px;
   height: 32px;
   font-size: 15px;
-  padding: 10px;
+  padding: 0 5px;
+  min-width: 80px;
 }
 
 .cell-phone input {
@@ -551,7 +557,7 @@ select.default-input {
   background-color: #f1db00;
 }
 .tag.complete {
-  background-color: #d70000;
+  background-color: #ff0000;
 }
 
 .border-list > ul {
@@ -622,7 +628,7 @@ select.default-input {
   background-color: #f1db00;
 }
 .tag.complete {
-  background-color: #d70000;
+  background-color: #ff0000;
 }
 
 .pagination {
@@ -863,6 +869,66 @@ footer .company-info-wrap .letter-wrap .copy-right {
   display: block;
   line-height: 0;
 }
+.apply-class .table-default {
+  margin-bottom: 10px;
+}
+.apply-class .table-default .cell-phone {
+  display: flex;
+  align-items: center;
+}
+.apply-class .table-default .cell-phone .input-wrap {
+  flex: 1 1 25%;
+}
+.apply-class .table-default .cell-phone .input-wrap input {
+  width: 100%;
+}
+.apply-class .table-default .cell-phone .dash {
+  padding: 2px;
+}
+.apply-class .table-default .class-period label {
+  display: block;
+  padding-left: 0;
+}
+.apply-class .table-default .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.apply-class .table-default .price .discounted input {
+  color: #ff0000;
+}
+.apply-class .table-default .select-certify {
+  display: flex;
+  gap: 5px;
+}
+.apply-class .table-default .select-certify select {
+  flex: 1 1 auto;
+}
+.apply-class .table-default .order-list {
+  margin-left: 10px;
+}
+.apply-class .table-default .order-list li {
+  text-indent: -15px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.apply-class .term-text {
+  text-align: center;
+  word-break: keep-all;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.apply-class .contract {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+.apply-class .contract .agree {
+  margin: 10px 0;
+  font-weight: 700;
+}
+.apply-class .notice-important {
+  color: #ff0000;
+}
 
 .class-sample .sample-video-wrap {
   margin-top: 20px;
@@ -874,4 +940,69 @@ footer .company-info-wrap .letter-wrap .copy-right {
 }
 .class-sample .sample-video-wrap .video-wrap video {
   width: 100%;
+}
+
+.notice-board.content-container {
+  margin: auto;
+}
+.notice-board .board-view .view-header {
+  padding: 0 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #818181;
+}
+.notice-board .board-view .view-header .title {
+  font-weight: 700;
+}
+.notice-board .board-view .view-header .info > ul li {
+  display: inline-block;
+  position: relative;
+  color: #818181;
+  font-size: 15px;
+  margin: 0 8px;
+}
+.notice-board .board-view .view-header .info > ul li:first-child {
+  margin-left: 0;
+}
+.notice-board .board-view .view-header .info > ul li:last-child:after {
+  content: none;
+}
+.notice-board .board-view .view-header .info > ul li:after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 1px solid #818181;
+  height: 12px;
+}
+.notice-board .board-view .view-body {
+  padding: 15px;
+  border-bottom: 1px solid #818181;
+}
+.notice-board .board-view .view-body .files > ul > li {
+  margin-bottom: 10px;
+}
+.notice-board .board-view .view-body .files > ul > li:before {
+  content: "•";
+  margin-right: 5px;
+}
+.notice-board .board-view .view-body .files > ul > li a {
+  color: #818181;
+}
+.notice-board .board-view .view-body .content-wrap {
+  margin-top: 20px;
+}
+.notice-board .nav-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 20px;
+}
+.notice-board .nav-button .prev:before {
+  content: "◀";
+  margin-right: 10px;
+}
+.notice-board .nav-button .next:after {
+  content: "▶";
+  margin-left: 10px;
 }

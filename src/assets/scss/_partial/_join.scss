@@ -1,31 +1,107 @@
-.join{
-  .text-box{
-    border: 1px solid $boxBorderColor;
+.join {
+  .step {
+    background-color: #f3f3f3;
+    color: #818181;
+    border: solid 1px #a4a4a4;
+    border-radius: 4px;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      > li {
+        position: relative;
+        display: inline-flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        padding: 10px 13px 10px 19px;
+        height: 57px;
+        box-sizing: border-box;
+        word-break: keep-all;
+        >span{
+          z-index: 1;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          right: -28px;
+          top: calc(50% - 8px);
+          height: 28px;
+          width: 29px;
+          border-right: 1px solid #a4a4a4;
+          border-bottom: 1px solid #a4a4a4;
+          background-color: #f3f3f3;
+          transform: rotate(-62deg) translateY(-50%) skew(-35deg);
+          z-index: 1;
+        }
+        &:last-child {
+          border-right: 0;
+          &:after {
+            content: none;
+          }
+        }
+        &.on {
+          color: #ffffff;
+          background-color: #0048af;
+          &:after {
+            background-color: #0048af;
+          }
+        }
+      }
+    }
+  }
+  .term-wrap{
+    background-color: #f3f3f3;
     padding: 20px;
-    height: 150px;
     font-size: 13px;
-    line-height: 1.4;
-    .scroll-custom{
-      height: 100%;
+    border: 1px solid #a4a4a4;
+    border-radius: 4px;
+    .title{
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #181818;
+    }
+    >ul{
+      display: table;
+      >li{
+        display: table-row;
+        .th, .td{
+          display: table-cell;
+          height: 20px;
+          padding: 5px 0;
+          line-height: 1.4;
+        }
+        .th{
+          width: 80px;
+          color: #818181;
+        }
+        .td{
+          >ul{
+            margin-top: 15px;
+            >li{
+              text-indent: -15px;
+              padding-left: 15px;
+              word-break: keep-all;
+              &:before{
+                content: '○';
+              }
+            }
+          }
+        }
+      }
     }
   }
-  .agree-terms{
-    margin-top: 15px;
-    text-align: right;
-  }
-  
-  .table-bottom{
-    justify-content: center;
-    .answer{
-      font-size: 18px;
-      margin-right: 20px;
-    }
-    .radio-wrap{
-      font-size: 18px;
+  .customer-info-basic{
+    .id-check-wrap{
+      margin-top: 10px;
     }
   }
-  .bottom-btn-wrap{
-    margin-top: 35px;
-    text-align: center;
+  .agree-wrap{
+    margin: 15px 0 30px;
+    font-weight: 700;
+    &.center{
+      text-align: center;
+    }
   }
 }

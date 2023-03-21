@@ -414,7 +414,7 @@ select.default-input {
 }
 
 .table-default {
-  font-size: 13px;
+  font-size: 14px;
   table-layout: fixed;
 }
 .table-default tbody th {
@@ -445,6 +445,19 @@ select.default-input {
 }
 .table-default .address-wrap .address input:last-child {
   margin-bottom: 0;
+}
+.table-default .cell-phone {
+  display: flex;
+  align-items: center;
+}
+.table-default .cell-phone .input-wrap {
+  flex: 1 1 25%;
+}
+.table-default .cell-phone .input-wrap input {
+  width: 100%;
+}
+.table-default .cell-phone .dash {
+  padding: 2px;
 }
 .table-default .notice-text {
   font-size: 15px;
@@ -502,7 +515,7 @@ select.default-input {
 }
 
 .table-schedule {
-  font-size: 12px;
+  font-size: 14px;
 }
 .table-schedule thead th {
   background-color: #f0f0f0;
@@ -533,7 +546,7 @@ select.default-input {
   text-align: center;
   height: 30px;
   vertical-align: middle;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .tag {
@@ -785,6 +798,178 @@ footer .company-info-wrap .letter-wrap .company-info .item:last-child::after {
 }
 footer .company-info-wrap .letter-wrap .copy-right {
   margin-top: 25px;
+}
+
+.join .step {
+  background-color: #f3f3f3;
+  color: #818181;
+  border: solid 1px #a4a4a4;
+  border-radius: 4px;
+}
+.join .step ul {
+  display: flex;
+  justify-content: space-around;
+}
+.join .step ul > li {
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 13px 10px 19px;
+  height: 57px;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+.join .step ul > li > span {
+  z-index: 1;
+}
+.join .step ul > li:after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: calc(50% - 8px);
+  height: 28px;
+  width: 29px;
+  border-right: 1px solid #a4a4a4;
+  border-bottom: 1px solid #a4a4a4;
+  background-color: #f3f3f3;
+  transform: rotate(-62deg) translateY(-50%) skew(-35deg);
+  z-index: 1;
+}
+.join .step ul > li:last-child {
+  border-right: 0;
+}
+.join .step ul > li:last-child:after {
+  content: none;
+}
+.join .step ul > li.on {
+  color: #ffffff;
+  background-color: #0048af;
+}
+.join .step ul > li.on:after {
+  background-color: #0048af;
+}
+.join .term-wrap {
+  background-color: #f3f3f3;
+  padding: 20px;
+  font-size: 13px;
+  border: 1px solid #a4a4a4;
+  border-radius: 4px;
+}
+.join .term-wrap .title {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #181818;
+}
+.join .term-wrap > ul {
+  display: table;
+}
+.join .term-wrap > ul > li {
+  display: table-row;
+}
+.join .term-wrap > ul > li .th, .join .term-wrap > ul > li .td {
+  display: table-cell;
+  height: 20px;
+  padding: 5px 0;
+  line-height: 1.4;
+}
+.join .term-wrap > ul > li .th {
+  width: 80px;
+  color: #818181;
+}
+.join .term-wrap > ul > li .td > ul {
+  margin-top: 15px;
+}
+.join .term-wrap > ul > li .td > ul > li {
+  text-indent: -15px;
+  padding-left: 15px;
+  word-break: keep-all;
+}
+.join .term-wrap > ul > li .td > ul > li:before {
+  content: "○";
+}
+.join .customer-info-basic .id-check-wrap {
+  margin-top: 10px;
+}
+.join .agree-wrap {
+  margin: 15px 0 30px;
+  font-weight: 700;
+}
+.join .agree-wrap.center {
+  text-align: center;
+}
+
+.login .header {
+  margin: 20px 0;
+  text-align: center;
+}
+.login .header img {
+  width: 150px;
+}
+.login h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #181818;
+  text-align: left;
+}
+.login .login-wrap {
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  padding: 30px;
+  max-width: 450px;
+  margin: 0 auto 50px;
+}
+.login .login-wrap .sub-text {
+  color: #818181;
+  font-size: 13px;
+}
+.login .login-wrap .input-wrap input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 50px;
+}
+.login .login-wrap .input-wrap .cell-phone {
+  display: flex;
+  align-items: center;
+}
+.login .login-wrap .input-wrap .cell-phone .input-wrap {
+  flex: 1 1 25%;
+}
+.login .login-wrap .input-wrap .cell-phone .input-wrap input {
+  width: 100%;
+}
+.login .login-wrap .input-wrap .cell-phone .dash {
+  padding: 2px;
+}
+.login .login-wrap .links {
+  margin-top: 25px;
+  text-align: center;
+}
+.login .login-wrap .links li {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: 700;
+}
+.login .login-wrap .links li:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 1px solid #181818;
+  height: 10px;
+}
+.login .login-wrap .links li:last-child:after {
+  content: none;
+}
+.login .btn.submit {
+  height: 50px;
 }
 
 .info-board .table-topper {

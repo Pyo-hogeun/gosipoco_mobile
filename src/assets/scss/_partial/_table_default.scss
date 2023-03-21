@@ -1,5 +1,5 @@
 .table-default {
-  font-size: 13px;
+  font-size: 14px;
   table-layout: fixed;
   tbody {
     th {
@@ -36,6 +36,19 @@
           margin-bottom: 0;
         }
       }
+    }
+  }
+  .cell-phone{
+    display: flex;
+    align-items: center;
+    .input-wrap{
+      flex: 1 1 25%;
+      input{
+        width: 100%;
+      }
+    }
+    .dash{
+      padding: 2px;
     }
   }
   .notice-text {

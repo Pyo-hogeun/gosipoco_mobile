@@ -1,0 +1,145 @@
+<html lang="ko">
+
+<head>
+  <meta charset="euc-kr">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고시포코</title>
+  <link rel="stylesheet" href="../assets/style/style_mobile.css">
+</head>
+
+<body>
+  <div class="content-container join">
+    <h2>회원가입</h2>
+
+    <div class="step">
+      <ul>
+        <li><span>01. 약관동의</span></li>
+        <li class="on"><span>02. 정보입력</span></li>
+        <li><span>03. 가입완료</span></li>
+        <li><span>04. 교육신청</span></li>
+      </ul>
+    </div>
+
+    <h4>기본정보</h4>
+    <table class="table-default th-align-l customer-info-basic">
+      <colgroup>
+        <col style="width: 100px;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>아이디</th>
+          <td>
+            <input type="text" name="" id="" class="default-input input-md with-button">
+            <button class="btn btn-sm btn-primary btn-round">중복확인</button>
+            <div class="id-check-wrap">
+              <p class="notice">
+                <span class="notice-text">사용가능</span>
+                <span class="description">(영,숫자 4~12자 이내로입력)</span>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td>
+            <input type="password" name="" id="" class="default-input input-md">
+            <p class="notice">
+              <span class="description">(영문,숫자,특수기호 포함 18자이내)</span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td>
+            <input type="password" name="" id="" class="default-input input-md">
+          </td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td>
+            <input type="text" name="" id="" class="default-input input-md">
+            <p class="notice">
+              <span class="description">실명으로 기재하세요</span>
+            </p>
+          </td>
+        </tr>
+        
+        <tr>
+          <th>일반전화</th>
+          <td>
+            <div class="cell-phone">
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+              <span class="dash">-</span>
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+              <span class="dash">-</span>
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>휴대전화</th>
+          <td>
+            <div class="cell-phone">
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+              <span class="dash">-</span>
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+              <span class="dash">-</span>
+              <div class="input-wrap">
+                <input type="text" maxlength="4" name="" id="" class="default-input">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td>
+            <input type="text" name="" id="" class="default-input input-md">
+          </td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td>
+            <div class="address-wrap">
+              <div class="post-number">
+                <input type="text" name="" id="" class="default-input input-sm">
+                <button class="btn btn-sm btn-primary btn-round">우편번호</button>
+              </div>
+              <div class="address">
+                <input type="text" name="" id="" class="default-input input-md">
+                <input type="text" name="" id="" class="default-input input-md">
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="agree-wrap center">
+      <p>당사에서 발송하는 정보를 문자나 이메일로  수신하시겠습니까?</p>
+      <label class="radio-wrap">
+        <input type="radio" name="email-agree" checked="">
+        <span>예</span>
+      </label>
+      <label class="radio-wrap">
+        <input type="radio" name="email-agree">
+        <span>아니오</span>
+      </label>
+    </div>
+
+    <button class="btn btn-primary btn-lg btn-wide">회원가입</button>
+    
+  </div>
+</body>
+
+</html>

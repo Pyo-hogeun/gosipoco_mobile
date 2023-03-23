@@ -15,11 +15,12 @@
 @import './_partial/table_list';
 @import './_partial/border_list';
 @import './_partial/pagination';
-// @import './_partial/gnb';
-// @import './_partial/nav';
+@import './_partial/gnb';
+@import './_partial/nav';
 @import './_partial/footer';
 
 // 페이지
+@import './_partial/main';
 @import './_partial/join';
 @import './_partial/login';
 @import './_partial/info_board';

@@ -1,0 +1,151 @@
+.main{
+  .main-visual{
+    img{
+      width: 100%;
+    }
+  }
+  .multie-banner{
+    display: flex;
+    a{
+      flex: 0 0 50%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .overview-wrap{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    .board-overview{
+      flex: 0 0 50%;
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $boxBorderColor;
+        height: 25px;
+        h4{
+          margin: 0;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        ul{
+          display: flex;
+          height: 100%;
+          border: 1px solid #cfcfcf;
+          li{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            background-color: #ffffff;
+            border-right: 1px solid #cfcfcf;
+            &:last-child{
+              border-right: 0;
+            }
+            a{
+              display: inline-flex;
+              color: #939393;
+              width: 100%;
+              height: 100%;
+              height: 25px;
+              font-size: 10px;
+              justify-content: center;
+              align-items: center;
+              padding: 2px;
+            }
+            &:hover, &.on{
+              background-color: #194373;
+              border: 1px solid #194373;
+              a{
+                color: white;
+              }
+            }			
+          }
+        }
+        .btn-more{
+          display: inline-block;
+          color: #7e7e7e;
+          font-size: 20px;
+        }
+      }
+      .content{
+        padding-top: 10px;
+        a{
+          color: gray;
+          font-size: 12px;
+        }
+        li::before{
+          content: '· ';
+        }
+      }
+    }
+  }
+  .contact{
+    background-color: #1074c3;
+    padding: 20px 0;
+    color: #ffffff;
+    .content-container{
+      margin-bottom: 0;
+      .header{
+        background-image: url('../../image/icon_contact.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 40px;
+        height: 50px;
+        padding-left: 45px;
+        padding-top: 15px;
+      }
+      .title{
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .sub-text{
+        font-size: 12px;
+      }
+      .radio-wrap{
+        font-size: 12px;
+        [type=radio]{
+          width: 13px;
+          height: 13px;
+          background-color: #ffffff;
+          border-color: #eeeeee;
+          &:checked{
+            background-color: #f49c00;
+            border-width: 0;
+            border-color: #f49c00;
+          }
+        }
+      }
+      .agree{
+        margin-top: 10px;
+        .checkbox-wrap{
+          font-size: 12px;
+          input[type=checkbox]{
+            accent-color: #f49c00;
+          }
+        }
+      }
+      .info{
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        .left, .right{
+          flex: 0 1 50%;
+        }
+        .name, .phone, textarea{
+          width: 100%;
+          font-size: 12px;
+        }
+        .name{
+          margin-bottom: 10px;
+        }
+        textarea{
+          height: 74px;
+        }
+      }
+    }
+  }
+}

@@ -1318,9 +1318,75 @@ footer .info {
 .apply-class .banners img {
   width: 100%;
 }
-.apply-class .banners ul > li a {
+.apply-class .banners ul > li .class-banner {
+  position: relative;
   display: block;
-  line-height: 0;
+  color: #ffffff;
+}
+.apply-class .banners ul > li .class-banner img {
+  width: 100%;
+  object-fit: contain;
+}
+.apply-class .banners ul > li .class-banner .title {
+  position: absolute;
+  top: 20%;
+  left: 44%;
+  font-size: 11px;
+  font-weight: 600;
+}
+.apply-class .banners ul > li .class-banner .price {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+.apply-class .banners ul > li .class-banner .price .as-is {
+  font-size: 12px;
+  position: relative;
+}
+.apply-class .banners ul > li .class-banner .price .as-is:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 150%;
+  top: 50%;
+  left: -20%;
+  border-bottom: 1px solid red;
+}
+.apply-class .banners ul > li .class-banner .price .as-is:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -45%;
+  width: 15px;
+  height: 5px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 10px solid red;
+  box-sizing: border-box;
+}
+.apply-class .banners ul > li .class-banner .price .to-be {
+  position: absolute;
+  left: 140%;
+  bottom: -17%;
+  font-size: 15px;
+  word-break: keep-all;
+}
+.apply-class .banners ul > li .class-banner .btn-link {
+  position: absolute;
+  display: inline-flex;
+  border-radius: 30px;
+  width: 80px;
+  height: 23px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0d1e42;
 }
 .apply-class .table-default {
   margin-bottom: 10px;

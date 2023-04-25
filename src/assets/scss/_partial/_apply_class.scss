@@ -16,14 +16,14 @@
         .title {
           position: absolute;
           top: 20%;
-          left: 44%;
+          left: 34%;
           font-size: 11px;
           font-weight: 600;
         }
         .price {
           position: absolute;
           top: 50%;
-          left: 30%;
+          left: 33%;
           .as-is {
             font-size: 12px;
             position: relative;
@@ -62,7 +62,7 @@
           position: absolute;
           display: inline-flex;
           border-radius: 30px;
-          width: 80px;
+          padding: 0 10px;
           height: 23px;
           align-items: center;
           justify-content: center;

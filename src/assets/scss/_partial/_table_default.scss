@@ -60,6 +60,9 @@
   .description {
     font-size: 14px;
     color: #898989;
+    &.red{
+      color: #ff0000;
+    }
   }
   .notice {
     margin: 5px 0;

@@ -1,0 +1,29 @@
+.introduce-company{
+  margin: 0;
+  padding: 0;
+  .introduce-bg{
+      background-image: url('../../image/introduction_company_background.png');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+      padding-top: 50px;
+      .introduce-article{
+          width: calc(100% - 140px);
+          margin: auto;
+          padding: 10px;
+          background-color: rgba(29, 72, 36, 0.4);
+          color: white;
+          text-align: center;
+          line-height: 1.6;
+          font-size: 12px;
+          h3{
+              color: white;
+              opacity: 1;
+          }
+          p{
+              opacity: 1;
+          }
+      }
+  }
+}

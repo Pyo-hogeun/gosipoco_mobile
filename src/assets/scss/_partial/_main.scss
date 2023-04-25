@@ -4,6 +4,23 @@
       width: 100%;
     }
   }
+  .main-swiper{
+    .swiper-wrapper{
+
+      height: 23vh;
+      .swiper-slide{
+        a{
+          display: inline-block;
+          height: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
   .multie-banner{
     display: flex;
     a{
@@ -22,7 +39,7 @@
     justify-content: space-between;
     gap: 10px;
     .board-overview{
-      flex: 0 0 50%;
+      flex: 1 0 50%;
       .header{
         display: flex;
         justify-content: space-between;
@@ -77,6 +94,11 @@
       .content{
         padding-top: 10px;
         a{
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 90%;
           color: gray;
           font-size: 12px;
         }
@@ -131,6 +153,14 @@
           }
         }
       }
+      .subject{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        select{
+          width: 100%;
+          font-size: 12px;
+        }
+      }
       .info{
         margin-top: 10px;
         display: flex;
@@ -147,6 +177,17 @@
         }
         textarea{
           height: 74px;
+        }
+      }
+      .btn-apply{
+        margin-top: 10px;
+        .btn.btn-yellow{
+          width: 100%;
+          height: 40px;
+          background-color: #f49c00;
+          color: #ffffff;
+          font-size: 12px;
+          text-align: center;
         }
       }
     }

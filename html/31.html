@@ -63,6 +63,9 @@
         <li><a href="">아이디찾기</a></li>
       </ul>
     </div>
+    <div class="cs-number">
+      고객상담: 1544-7125
+    </div>
   </div>
   <div class="main">
     <div class="main-visual">
@@ -118,6 +121,13 @@
             <li><a href="">가산점 게시판입니다.</a></li>
           </ul>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+        <script>
+          $('.board-overview .header > ul > li > a').on('click', function(e){
+            e.preventDefault();
+            $(this).parents('li').addClass('on').siblings('li').removeClass('on');
+          })
+        </script>
       </div>
     </div>
     <div class="contact">
@@ -140,12 +150,7 @@
             <span>자격증</span>
           </label>
         </div>
-        <div class="agree">
-          <label class="checkbox-wrap">
-            <input type="checkbox" name="term-agree">
-            <span>개인정보수집에 동의합니다.</span>
-          </label>
-        </div>
+        
         <div class="info">
           <div class="left">
             <input type="text" name="" id="" class="default-input name" placeholder="이름">
@@ -154,6 +159,15 @@
           <div class="right">
             <textarea name="" id="" cols="30" rows="3" class="default-input" placeholder="상담메모"></textarea>
           </div>
+        </div>
+        <div class="agree">
+          <label class="checkbox-wrap">
+            <input type="checkbox" name="term-agree">
+            <span>개인정보수집에 동의합니다.</span>
+          </label>
+        </div>
+        <div class="btn-apply">
+          <button type="button" class="btn btn-yellow submit">신청하기</button>
         </div>
 
       </div>

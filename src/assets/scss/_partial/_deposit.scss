@@ -1,0 +1,35 @@
+.deposit{
+  margin-top: 75px;
+  text-align: center;
+  p{
+      color: #818181;
+      font-size: 16px;
+      line-height: 1.4;
+  }
+  table{
+      width: 100%;
+      text-align: center;
+      tr{
+          td{
+            font-size: 13px;
+              .bank-img{
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: contain;
+                  // width: 100px;
+                  height: 30px;
+                  margin: auto;
+                  &.kb{
+                      background-image: url('../../image/kb.png');
+                  }
+                  &.nh{
+                      background-image: url('../../image/nh.png');
+                  }
+                  &.woori{
+                      background-image: url('../../image/woori.png');
+                  }
+              }
+          }
+      }
+  }
+}

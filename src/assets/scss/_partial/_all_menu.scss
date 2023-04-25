@@ -9,6 +9,7 @@
   display: none;
   &.on{
     display: block;
+    z-index: 2;
   }
   .header {
     position: relative;
@@ -85,5 +86,9 @@
         }
       }
     }
+  }
+  .cs-number{
+    margin-top: 20px;
+    padding: 0 22px;
   }
 }

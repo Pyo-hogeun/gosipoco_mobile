@@ -11,6 +11,7 @@ name='$name',
 lname='$code',
 hp='$hp',
 email='$email',
+subject='$subject', 
 contents='$contents',
 regdate='".time()."'
 ";

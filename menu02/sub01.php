@@ -38,9 +38,15 @@ if($c){
 	}else if($t=="type3"){
 		$i_price1=$data_subject[type3_price];
 		$i_price2=$data_subject[type3_price2];
-	}else{
+	}else if($data_subject[type1]!="1"){
 		$i_price1=$data_subject[type1_price];
 		$i_price2=$data_subject[type1_price2];
+	}else if($data_subject[type2]!="1"){
+		$i_price1=$data_subject[type2_price];
+		$i_price2=$data_subject[type2_price2];
+	}else if($data_subject[type3]!="1"){
+		$i_price1=$data_subject[type3_price];
+		$i_price2=$data_subject[type3_price2];
 	}
 }
 ?>
@@ -182,7 +188,7 @@ if($c){
           <td>
             <div class="select-certify">
               <select name="" id="" class="default-input" onchange="cate('/inc/select_cate.php?form=cform&target=c&code1='+this.value);">
-                <option value="">구분</option>
+                <option value="">==구분==</option>
 			<?
 				$cr1=mysql_query("select * from config_category where CHAR_LENGTH(code)=2 order by code");
 				while ($cd1 = mysql_fetch_assoc($cr1)){
@@ -191,8 +197,7 @@ if($c){
 			<? } ?>
               </select>
               <select name="c" id="" class="default-input" onchange="document.cform.submit();">
-                <option value="">교육선택</option>
-              <option value="">:::교육선택:::</option>
+                <option value="">==교육과목==</option>
 			<?
 				if($c){
 					$cr1=mysql_query("select * from subject where code1='".substr($c,0,2)."' ");
@@ -217,13 +222,13 @@ if($c){
 <? } ?>
 <? if($data_subject[type2]!="1"){ ?>
               <label class="radio-wrap">
-                <input type="radio" name="term1" <?=$t=="type2"?"checked":""?> onclick="document.cform.price1.value='<?=number($data_subject[type2_price])?>';document.cform.price2.value='<?=number($data_subject[type2_price2])?>';document.getElementById('t_price').innerHTML='<?=number($data_subject[type2_price2])?>';">
+                <input type="radio" name="term1" <?=$t=="type2"||$data_subject[type1]=="1"?"checked":""?> onclick="document.cform.price1.value='<?=number($data_subject[type2_price])?>';document.cform.price2.value='<?=number($data_subject[type2_price2])?>';document.getElementById('t_price').innerHTML='<?=number($data_subject[type2_price2])?>';">
                 <span>단기반(6개월)</span>
               </label>
 <? } ?>
 <? if($data_subject[type3]!="1"){ ?>
               <label class="radio-wrap">
-                <input type="radio" name="term1" <?=$t=="type3"?"checked":""?> onclick="document.cform.price1.value='<?=number($data_subject[type3_price])?>';document.cform.price2.value='<?=number($data_subject[type3_price2])?>';document.getElementById('t_price').innerHTML='<?=number($data_subject[type3_price2])?>';">
+                <input type="radio" name="term1" <?=$t=="type3"||($data_subject[type1]=="1"&&$data_subject[type2]=="1")?"checked":""?> onclick="document.cform.price1.value='<?=number($data_subject[type3_price])?>';document.cform.price2.value='<?=number($data_subject[type3_price2])?>';document.getElementById('t_price').innerHTML='<?=number($data_subject[type3_price2])?>';">
                 <span>종합반(12개월)</span>
               </label>
 <? } ?>

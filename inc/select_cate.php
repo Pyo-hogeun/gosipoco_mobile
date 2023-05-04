@@ -8,7 +8,7 @@ $connect = dbconn();
 		$i=0;
 		echo "<script>";
 		echo "parent.document.$form.elements['$target'].options.length = 0; \n";
-		echo "parent.document.$form.elements['$target'].options['$i'] = new Option('자격증선택', ''); \n";
+		echo "parent.document.$form.elements['$target'].options['$i'] = new Option('==교육과목==', ''); \n";
 
 		$qry = "select * from subject where (type1!='1' or type2!='1' or type3!='1' or type4!='1') and code1='$code1' ";
 		$result=mysql_query($qry);

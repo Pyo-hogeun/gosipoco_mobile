@@ -22,6 +22,9 @@ function sms_go(){
 		f.submit();
 	}
 }
+	function cate(str,code){
+		document.getElementById("HiddenFrm").src=str;
+	}
 </script>
 
   <div class="main">
@@ -87,7 +90,7 @@ while ($data=mysql_fetch_array($result)){
 						$dre=mysql_query($sql) or die(mysql_error());
 						while($ddata=mysql_fetch_array($dre)){
 						?>
-            <li><a href="/menu06/sub01_view.php?id=<?=$bid?>&act1=view&vno=<?=$ddata[no]?>"><?=cut_str(strip_tags($ddata[subject]),30)?></a></li>
+            <li><a href="/menu06/sub01_view.php?id=<?=$bid?>&act1=view&vno=<?=$ddata[no]?>"><?=cut_str(strip_tags($ddata[subject]),45)?></a></li>
 					   <?php
 						$co++;
 					   }
@@ -136,21 +139,27 @@ while ($data=mysql_fetch_array($result)){
         </div>
         <div class="type">
           <label class="radio-wrap">
-            <input type="radio" name="code" value="검정고시" checked>
+            <input type="radio" name="code" value="검정고시" checked onclick="cate('/inc/quick_menu_select.php?form=cform_counsel&target=subject&code1=01');">
             <span>검정고시</span>
           </label>
           <label class="radio-wrap">
-            <input type="radio" name="code" value="공무원">
+            <input type="radio" name="code" value="공무원" onclick="cate('/inc/quick_menu_select.php?form=cform_counsel&target=subject&code1=02');">
             <span>공무원</span>
           </label>
           <label class="radio-wrap">
-            <input type="radio" name="code" value="자격증">
+            <input type="radio" name="code" value="자격증" onclick="cate('/inc/quick_menu_select.php?form=cform_counsel&target=subject&code1=03');">
             <span>자격증</span>
           </label>
         </div>
         <div class="subject">
-          <select name="" id="" class="default-input">
+          <select name="subject" id="" class="default-input">
             <option value="">==교육과목==</option>
+			<?
+			$cr1=mysql_query("select * from config_category where code1='01' and length(code)=4 ");
+			while ($cd1 = mysql_fetch_assoc($cr1)){
+			?>
+              <option value="<?=$cd1[code]?>"><?=$cd1[name]?></option>
+			<? } ?>
           </select>
         </div>
         <div class="info">

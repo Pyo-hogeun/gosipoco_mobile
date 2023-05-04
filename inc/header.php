@@ -53,7 +53,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/libraries/Code.inc.lib.php";
   </div>
   <div class="nav">
     <ul>
-      <li><a href="/menu01/sub01.php">교육과목</a></li>
+      <li><a href="/menu01/sub04.php">교육과목</a></li>
       <li><a href="/menu02/sub01.php">수강신청</a></li>
       <li><a href="/menu04/sub01.php">샘플강좌</a></li>
       <li><a href="/menu05/sub01.php">강의보기</a></li>

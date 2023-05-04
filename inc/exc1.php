@@ -65,7 +65,7 @@ while(1){
 		//exit($sql);
 		$res = mysql_query($sql,$connect) or die(mysql_error());
 		if(1){
-			$gopage = "/mypage/member_list.php?PageNum=2&ono=$cmono";
+			$gopage = "/";
 ?>
 		<script>
 				parent.document.location.href=('<?=$gopage?><?=$href?><?=$bookm?>');

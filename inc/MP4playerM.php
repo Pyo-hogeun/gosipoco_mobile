@@ -7,29 +7,62 @@ include_once $_SERVER['DOCUMENT_ROOT']."/libraries/setting.inc.lib.php";
 // 공통 배열 관련
 include_once $_SERVER['DOCUMENT_ROOT']."/libraries/Code.inc.lib.php";
 
+$rr=qrow("select viewing from repetition WHERE midx='".$_SESSION[Mno]."'");	
+if(!$rr[0]){qresult("update repetition SET regdate='".time()."' ,mip='".$REMOTE_ADDR."',viewing='1' WHERE midx='".$_SESSION[Mno]."'");}
+else{
+	echo "<script language='javascript'>
+				alert('동영상강좌는 중복시청이 불가합니다.');
+			   self.close();
+			  </script>";
+			  exit;
+}
+
+if(!$_SESSION[Mno]){
+echo "<script language='javascript'>
+	    	alert('잘못된접근입니다.');
+		   self.close();
+		  </script>";
+		  exit;
+}
+
+if(!$l || !$lno || !$lc){
+echo "<script language='javascript'>
+	    	alert('잘못된접근입니다.');
+		   self.close();
+		  </script>";
+		  exit;
+}
+
 $llcheck=false;
-if($_SESSION[Mid]&&($_SESSION[Slevel]=="1"||$_SESSION[Slevel]=="2"||$_SESSION[Slevel]=="8")){
-	$llno_soc = qassoc("select * from cmorder where substring(lcode,1,2)='".substr($lc,0,2)."' and mid='".$_SESSION[Mid]."' and cmostatus=2");
+if($_SESSION[Mid]){
+	$llno_soc = qassoc("select * from cmorder where substring(lcode,1,2)='".substr($lc,0,2)."' and midx='".$_SESSION[Mno]."' and cmostatus=2");
+	//echo $llno_soc[lcode];
 	if(strlen($llno_soc[lcode])==2){
 		if(substr($lc,0,2)==$llno_soc[lcode])$llcheck=true;
 	} else {
 		if(substr($lc,0,4)==$llno_soc[lcode])$llcheck=true;
 	}
+	//$llno = substr($lc,0,4);
+	//$lvalue = qrow("select count(idx) from cmorder where lcode like '".$llno."%' and midx='".$_SESSION[Mno]."' and cmostatus=2");
+	//if($lvalue[0]>=1)$llcheck=true;
 }
 
 if(!$llcheck){
-	echo "<script language='javascript'>
-				alert('동영상강좌 시청권한이 없습니다.');
-			   self.close();
-			  </script>";
-	exit;
+echo "<script language='javascript'>
+	    	alert('동영상강좌 시청권한이 없습니다.');
+		   self.close();
+		  </script>";
+		  exit;
 }
 
-$Qry = "select * from edumovie where idx='$idx'";
-$data = mysql_fetch_array(mysql_query($Qry));
-$edumovie=$data[mmp4];
+$movie = qrow("select pmp4,eduno,subject from edumovie where idx='$lno'");
+$edumovie = $movie[0];
+
+$query="insert into subject_view set user_id='".$_SESSION[Mno]."',sub_l='$lno',type='3',cip='".$_SERVER['REMOTE_ADDR']."',ctype='$dataType',regdate=now() ";
+mysql_query($query);
 
 
+$cname=cate($lc);
 ?>
 
 <!DOCTYPE html>

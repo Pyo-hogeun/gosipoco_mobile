@@ -474,6 +474,7 @@ textarea.default-input {
   height: 30px;
   border: 1px solid #d3d3d3;
   padding: 7px;
+  letter-spacing: -0.5px;
 }
 .table-default.th-align-l td,
 .table-default.th-align-l th {

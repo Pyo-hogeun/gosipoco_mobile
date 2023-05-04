@@ -474,6 +474,7 @@ textarea.default-input {
   height: 30px;
   border: 1px solid #d3d3d3;
   padding: 7px;
+  letter-spacing: -0.5px;
 }
 .table-default.th-align-l td,
 .table-default.th-align-l th {
@@ -701,7 +702,7 @@ textarea.default-input {
   display: flex;
   gap: 5px;
   margin: 10px 0;
-  justify-content: space-between;
+  justify-content: center;
 }
 .pagination a {
   display: inline-flex;
@@ -1144,6 +1145,14 @@ footer .info {
 .main .contact .content-container .agree .checkbox-wrap input[type=checkbox] {
   accent-color: #f49c00;
 }
+.main .contact .content-container .subject {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.main .contact .content-container .subject select {
+  width: 100%;
+  font-size: 12px;
+}
 .main .contact .content-container .info {
   margin-top: 10px;
   display: flex;
@@ -1440,14 +1449,14 @@ footer .info {
 .apply-class .banners ul > li .class-banner .title {
   position: absolute;
   top: 20%;
-  left: 44%;
+  left: 34%;
   font-size: 11px;
   font-weight: 600;
 }
 .apply-class .banners ul > li .class-banner .price {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 33%;
 }
 .apply-class .banners ul > li .class-banner .price .as-is {
   font-size: 12px;
@@ -1486,7 +1495,7 @@ footer .info {
   position: absolute;
   display: inline-flex;
   border-radius: 30px;
-  width: 80px;
+  padding: 0 10px;
   height: 23px;
   align-items: center;
   justify-content: center;
